@@ -42,7 +42,7 @@ def shares_to_mnemonic(shares: Dict[int, Union[Bip39Mnemonic, str]]) -> Bip39Mne
     for share_num, share in shares.items():
         share_bytes = decoder.Decode(share)
         share_hex = share_bytes.hex()
-        share_str = "-".join([str(share_num), share_hex])
+        share_str = f"{share_num}-{share_hex}"
         shares_list.append(share_str)
     mnemonic_hex = SecretSharer.recover_secret(shares_list)
     mnemonic_bytes = bytes.fromhex(mnemonic_hex)
