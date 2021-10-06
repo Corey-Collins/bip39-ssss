@@ -5,7 +5,7 @@ from bip_utils import (
     Bip39Mnemonic,
     Bip39MnemonicValidator,
 )
-from bip_utils.bip39.bip39_mnemonic import Bip39MnemonicConst
+from bip_utils.bip.bip39.bip39_mnemonic import Bip39MnemonicConst
 from ssss import make_random_shares, recover_secret
 from typing import Union, List, Tuple
 
